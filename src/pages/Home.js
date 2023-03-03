@@ -3,8 +3,13 @@ import { LinkedIn, Email } from "@material-ui/icons";
 import GithubIcon from "@material-ui/icons/GitHub";
 import ReactTypingEffect from "react-typing-effect";
 import "../styles/Home.css";
+import Link from "@mui/material/Link";
 
 function Home() {
+  const linkedInLink =
+    "https://www.linkedin.com/in/ashyr-magtymgulyyev-42ba16197/";
+  const emailLink = "mailto:ashyr.magtymguly@gmail.com";
+  const githubLink = "https://github.com/Ash-HubGit";
   return (
     <div className="home">
       <div className="about">
@@ -17,9 +22,15 @@ function Home() {
         </h2>
         <div className="prompt">
           <p>A Front-End developer with a passion for learning and creating.</p>
-          <LinkedIn />
-          <Email />
-          <GithubIcon />
+          <Link href={linkedInLink} target="_blank">
+            <LinkedIn />
+          </Link>
+          <Link href={githubLink} target="_blank">
+            <GithubIcon />
+          </Link>
+          <Link href={emailLink} target="_blank">
+            <Email />
+          </Link>
         </div>
       </div>
       <div className="skills">
